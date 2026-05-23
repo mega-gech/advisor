@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="brand" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2L2 7v7c0 5 4 9 10 9s10-4 10-9V7l-10-5zM12 12a3 3 0 100-6 3 3 0 000 6z"/>
+  </symbol>
+  <symbol id="menu" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/>
+  </symbol>
+  <symbol id="search" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 20l-4.35-4.35A7 7 0 1019 17l2 2zM5 11a6 6 0 1112 0A6 6 0 015 11z"/>
+  </symbol>
+  <symbol id="bell" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 22a2 2 0 002-2H10a2 2 0 002 2zm6-6V10a6 6 0 10-12 0v6l-2 2v1h16v-1l-2-2z"/>
+  </symbol>
+  <symbol id="home" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M3 11.5L12 4l9 7.5V20a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1V11.5z"/>
+  </symbol>
+  <symbol id="user" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 12a5 5 0 100-10 5 5 0 000 10zm-7 9a7 7 0 0114 0H5z"/>
+  </symbol>
+  <symbol id="mail" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M2 6v12a2 2 0 002 2h16a2 2 0 002-2V6l-10 6L2 6zM4 8l8 5 8-5"/>
+  </symbol>
+  <symbol id="calendar" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M7 11h10v6H7v-6zm10-7h-1V2h-2v2H10V2H8v2H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V6a2 2 0 00-2-2z"/>
+  </symbol>
+  <symbol id="folder" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M10 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V8a2 2 0 00-2-2h-8l-2-2z"/>
+  </symbol>
+  <symbol id="document" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM13 3.5L18.5 9H13V3.5z"/>
+  </symbol>
+  <symbol id="help" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 15h-2v-2h2v2zm1.07-7.75c-.9.92-1.07 1.25-1.07 2.25h-2v-.5c0-1 .4-1.5 1.5-2.5 1.1-1 1.5-1.5 1.5-2.5 0-1.3-1-2-2.5-2-1.5 0-2.5 0-3 1H9c.5-1 1.8-2 4-2 2.2 0 4 1 4 3 0 1-.3 1.3-1.93 2.25z"/>
+  </symbol>
+  <symbol id="logout" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M16 13v-2H7V8l-5 4 5 4v-3h9zM20 3h-8v2h8v14h-8v2h8a2 2 0 002-2V5a2 2 0 00-2-2z"/>
+  </symbol>
+  <symbol id="message" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M21 6H3v11a2 2 0 002 2h14l3 3V8a2 2 0 00-2-2z"/>
+  </symbol>
+  <symbol id="chart" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M3 3v18h18v-2H5V3H3zm6 8h2v7H9v-7zm4-4h2v11h-2V7zm4 6h2v5h-2v-5z"/>
+  </symbol>
+  <symbol id="phone" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011.1-.2c1.2.5 2.5.8 3.9.8a1 1 0 011 1V20a1 1 0 01-1 1C10.6 21 3 13.4 3 3a1 1 0 011-1h2.5a1 1 0 011 1c0 1.4.3 2.7.8 3.9a1 1 0 01-.2 1.1L6.6 10.8z"/>
+  </symbol>
+  <symbol id="clock" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2a10 10 0 100 20 10 10 0 000-20zm1 11h4v-2h-3V6h-2v7z"/>
+  </symbol>
+  <symbol id="location" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M12 2C8 2 5 5 5 9c0 6.1 7 13 7 13s7-6.9 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/>
+  </symbol>
+  <symbol id="book" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M6 2h9a3 3 0 013 3v14a1 1 0 01-1 1H6a3 3 0 01-3-3V5a3 3 0 013-3z"/>
+  </symbol>
+  <symbol id="clipboard" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M7 3h10a2 2 0 012 2v14a2 2 0 01-2 2H7a2 2 0 01-2-2V5a2 2 0 012-2zm5 2a2 2 0 100 4 2 2 0 000-4z"/>
+  </symbol>
+  <symbol id="users" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zM8 11c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5C15 14.17 10.33 13 8 13zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5C23 14.17 18.33 13 16 13z"/>
+  </symbol>
+  <symbol id="key" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M7 14a5 5 0 115-5 5 5 0 01-5 5zm10.5-6.5l3 3L20 13l-3-3 1.5-1.5zM21 2l-2 2 1 1 2-2-1-1z"/>
+  </symbol>
+  <symbol id="link" viewBox="0 0 24 24">
+    <path fill="currentColor" d="M10.59 13.41a1 1 0 001.41 0l3-3a4 4 0 10-5.66-5.66l-1 1a1 1 0 001.41 1.41l1-1a2 2 0 112.83 2.83l-3 3a1 1 0 000 1.41zM6.41 18.59a4 4 0 105.66 0l1-1a1 1 0 10-1.41-1.41l-1 1a2 2 0 11-2.83-2.83l3-3a1 1 0 10-1.41-1.41l-3 3a4 4 0 000 5.66z"/>
+  </symbol>
+</svg>
