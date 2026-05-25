@@ -33,7 +33,7 @@ include __DIR__ . '/../layouts/header.php';
     <div class="page-content">
         <div class="welcome-section">
             <div>
-                <h1 class="welcome-title">Welcome back, <?php echo htmlspecialchars($firstName); ?>! 👋</h1>
+                <h1 class="welcome-title">Welcome back, <?php echo htmlspecialchars($firstName); ?></h1>
                 <p class="welcome-subtitle"><?php
                     $subtitles = [
                         'dashboard' => "Here's an overview of system activities.",
@@ -47,10 +47,7 @@ include __DIR__ . '/../layouts/header.php';
                     echo htmlspecialchars($subtitles[$section] ?? $subtitles['dashboard']);
                 ?></p>
             </div>
-            <div class="date-picker">
-                <span class="date-picker-icon"><svg class="icon" width="16" height="16"><use xlink:href="<?php echo $icon; ?>#calendar"></use></svg></span>
-                <?php echo date('M d, Y | l'); ?>
-            </div>
+
         </div>
 
         <!-- Dashboard overview -->

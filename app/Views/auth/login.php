@@ -6,8 +6,6 @@ include __DIR__ . '/../layouts/auth-header.php';
     <?php $variant = 'login'; include __DIR__ . '/../partials/auth-brand.php'; ?>
 
     <div class="auth-v2-main">
-        <?php include __DIR__ . '/../partials/auth-lang-select.php'; ?>
-
         <div class="auth-v2-card-wrap">
             <div class="auth-v2-card">
                 <h2 class="auth-v2-card-title">Login to your account</h2>

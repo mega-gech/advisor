@@ -7,7 +7,7 @@ include __DIR__ . '/../layouts/auth-header.php';
     <?php $variant = 'register'; include __DIR__ . '/../partials/auth-brand.php'; ?>
 
     <div class="auth-v2-main">
-        <?php include __DIR__ . '/../partials/auth-lang-select.php'; ?>
+           <!-- Language selector removed -->
 
         <div class="auth-v2-card-wrap auth-v2-card-wrap--wide">
             <div class="auth-v2-card">
