@@ -66,17 +66,6 @@ cd advisor
 php -S localhost:8080 -t public
 ```
 
-Open `http://localhost:8080`
-
-## Demo accounts
-
-Password for all: **password123**
-
-| Role      | Email                 |
-|-----------|------------------------|
-| Registrar | registrar@aau.edu.et   |
-| Advisor   | advisor@aau.edu.et     |
-| Student   | student@aau.edu.et     |
 
 ## Architecture
 
