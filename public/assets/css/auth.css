@@ -437,67 +437,6 @@ body.auth-body {
     display: block;
 }
 
-/* Divider */
-.auth-v2-divider {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin: 24px 0 20px;
-    color: var(--auth-muted);
-    font-size: 0.85rem;
-}
-
-.auth-v2-divider::before,
-.auth-v2-divider::after {
-    content: '';
-    flex: 1;
-    height: 1px;
-    background: var(--auth-border);
-}
-
-/* Role quick-login cards */
-.auth-v2-role-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.auth-v2-role-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 10px;
-    border: 1px solid var(--auth-border);
-    border-radius: var(--auth-radius);
-    background: #fff;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--auth-text);
-    cursor: pointer;
-    transition: border-color 0.15s, box-shadow 0.15s, transform 0.1s;
-}
-
-.auth-v2-role-card:hover {
-    border-color: var(--auth-blue);
-    box-shadow: 0 4px 12px rgba(0, 86, 210, 0.12);
-    transform: translateY(-1px);
-}
-
-.auth-v2-role-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.1rem;
-}
-
-.auth-v2-role-icon.student { background: #dbeafe; }
-.auth-v2-role-icon.advisor { background: #d1fae5; }
-.auth-v2-role-icon.registrar { background: #ede9fe; }
-
 .auth-v2-card-footer {
     text-align: center;
     font-size: 0.9rem;
@@ -683,10 +622,6 @@ body.auth-body {
     }
 
     .auth-v2-field-row-2 {
-        grid-template-columns: 1fr;
-    }
-
-    .auth-v2-role-cards {
         grid-template-columns: 1fr;
     }
 }

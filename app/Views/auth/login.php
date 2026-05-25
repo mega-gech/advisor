@@ -56,23 +56,6 @@ include __DIR__ . '/../layouts/auth-header.php';
                     </button>
                 </form>
 
-                <div class="auth-v2-divider"><span>or</span></div>
-
-                <div class="auth-v2-role-cards" role="group" aria-label="Quick login by role">
-                    <button type="button" class="auth-v2-role-card auth-v2-role-student" data-demo-email="student@aau.edu.et">
-                        <span class="auth-v2-role-icon student" aria-hidden="true">🎓</span>
-                        <span>Student</span>
-                    </button>
-                    <button type="button" class="auth-v2-role-card auth-v2-role-advisor" data-demo-email="advisor@aau.edu.et">
-                        <span class="auth-v2-role-icon advisor" aria-hidden="true">👤</span>
-                        <span>Advisor</span>
-                    </button>
-                    <button type="button" class="auth-v2-role-card auth-v2-role-registrar" data-demo-email="registrar@aau.edu.et">
-                        <span class="auth-v2-role-icon registrar" aria-hidden="true">🛡</span>
-                        <span>Registrar</span>
-                    </button>
-                </div>
-
                 <p class="auth-v2-card-footer">
                     Don't have an account? <a href="<?php echo url('register'); ?>">Contact Registrar</a>
                 </p>

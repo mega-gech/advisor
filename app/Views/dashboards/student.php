@@ -16,10 +16,12 @@ include __DIR__ . '/../layouts/header.php';
 <div class="student-dashboard portal-dashboard" data-active-section="<?php echo htmlspecialchars($section); ?>">
     <?php
     $roleLabel = 'Student';
-    $searchPlaceholder = 'Search messages…';
+    $topbarSearch = portal_topbar_search('student', $section);
     $notifCount = (int) ($portalBadges['notifications'] ?? 0);
-    $searchAction = url('student_dashboard');
-    $searchSection = 'messages';
+    $searchAction = $topbarSearch['enabled'] ? url('student_dashboard') : '';
+    $searchSection = $topbarSearch['section'];
+    $searchPlaceholder = $topbarSearch['placeholder'];
+    $searchAriaLabel = $topbarSearch['aria'];
     $searchValue = $search;
     $dashboardAction = 'student_dashboard';
     $notifLink = url('student_dashboard', ['section' => 'notifications']);
@@ -135,7 +137,7 @@ include __DIR__ . '/../layouts/header.php';
                     <form action="<?php echo url('student_send_message'); ?>" method="POST" class="inline-form-grid">
                         <input type="text" name="title" placeholder="Subject" required>
                         <textarea name="message" rows="2" placeholder="Write a message…" required></textarea>
-                        <button type="submit" class="btn btn-primary" style="width:auto;">Send</button>
+                        <button type="submit" class="btn btn-primary" style="width:auto;">Send message</button>
                     </form>
                 </div>
                 <?php endif; ?>

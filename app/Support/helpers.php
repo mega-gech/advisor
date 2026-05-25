@@ -135,3 +135,58 @@ function filter_students_by_search(array $students, string $search): array {
         return str_contains($hay, $needle);
     }));
 }
+
+/**
+ * Top bar search: only enabled on sections where search is implemented.
+ *
+ * @return array{enabled: bool, section: string, placeholder: string, aria: string}
+ */
+function portal_topbar_search(string $role, string $currentSection): array {
+    $off = ['enabled' => false, 'section' => '', 'placeholder' => '', 'aria' => ''];
+
+    if ($role === 'student') {
+        if (in_array($currentSection, ['dashboard', 'messages'], true)) {
+            return [
+                'enabled' => true,
+                'section' => 'messages',
+                'placeholder' => 'Search messages by subject or content…',
+                'aria' => 'Search messages',
+            ];
+        }
+        return $off;
+    }
+
+    if ($role === 'advisor') {
+        if (in_array($currentSection, ['dashboard', 'students'], true)) {
+            return [
+                'enabled' => true,
+                'section' => 'students',
+                'placeholder' => 'Search students by name, email, or ID…',
+                'aria' => 'Search students',
+            ];
+        }
+        if ($currentSection === 'messages') {
+            return [
+                'enabled' => true,
+                'section' => 'messages',
+                'placeholder' => 'Search messages by subject or content…',
+                'aria' => 'Search messages',
+            ];
+        }
+        return $off;
+    }
+
+    if ($role === 'registrar') {
+        if (in_array($currentSection, ['dashboard', 'users'], true)) {
+            return [
+                'enabled' => true,
+                'section' => 'users',
+                'placeholder' => 'Search users by name or email…',
+                'aria' => 'Search users',
+            ];
+        }
+        return $off;
+    }
+
+    return $off;
+}

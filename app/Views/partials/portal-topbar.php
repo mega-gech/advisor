@@ -4,11 +4,13 @@
 /** @var string $userName */
 /** @var string $roleLabel */
 /** @var string $searchPlaceholder */
+/** @var string $searchAriaLabel */
 /** @var int $notifCount */
 $notifCount = $notifCount ?? 0;
 $searchAction = $searchAction ?? '';
 $searchValue = $searchValue ?? '';
 $searchSection = $searchSection ?? 'users';
+$searchAriaLabel = $searchAriaLabel ?? 'Search';
 $dashboardAction = $dashboardAction ?? 'registrar_dashboard';
 $notifLink = $notifLink ?? '';
 ?>
@@ -26,8 +28,7 @@ $notifLink = $notifLink ?? '';
             <span class="search-icon">
                 <svg class="icon" width="16" height="16"><use xlink:href="<?php echo $icon; ?>#search"></use></svg>
             </span>
-            <input type="search" name="search" placeholder="<?php echo htmlspecialchars($searchPlaceholder); ?>" value="<?php echo htmlspecialchars($searchValue); ?>" aria-label="Search users">
-            <button type="submit" class="search-submit-btn" aria-label="Search">Go</button>
+            <input type="search" name="search" placeholder="<?php echo htmlspecialchars($searchPlaceholder); ?>" value="<?php echo htmlspecialchars($searchValue); ?>" aria-label="<?php echo htmlspecialchars($searchAriaLabel); ?>" title="Press Enter to search">
         </form>
         <?php else: ?>
         <div class="search-container">

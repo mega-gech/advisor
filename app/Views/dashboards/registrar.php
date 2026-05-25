@@ -18,11 +18,14 @@ include __DIR__ . '/../layouts/header.php';
 <div class="registrar-dashboard portal-dashboard" data-active-section="<?php echo htmlspecialchars($section); ?>">
     <?php
     $roleLabel = 'Registrar';
-    $searchPlaceholder = 'Search users by name or email…';
+    $topbarSearch = portal_topbar_search('registrar', $section);
     $notifCount = (int) ($portalBadges['notifications'] ?? 0);
-    $searchAction = url('registrar_dashboard');
+    $searchAction = $topbarSearch['enabled'] ? url('registrar_dashboard') : '';
+    $searchSection = $topbarSearch['section'];
+    $searchPlaceholder = $topbarSearch['placeholder'];
+    $searchAriaLabel = $topbarSearch['aria'];
     $searchValue = $search ?? '';
-    $searchSection = 'users';
+    $dashboardAction = 'registrar_dashboard';
     $notifLink = url('registrar_dashboard', ['section' => 'notifications']);
     include __DIR__ . '/../partials/portal-topbar.php';
     ?>
@@ -38,7 +41,7 @@ include __DIR__ . '/../layouts/header.php';
                         'approvals' => 'Review and approve pending student registrations.',
                         'reports' => 'System statistics and enrollment summary.',
                         'users' => 'Search, filter, and manage all user accounts.',
-                        'settings' => 'Your registrar account and system preferences.',
+                        'settings' => 'Send broadcasts to advisors and view your account details.',
                         'notifications' => 'Recent items that need your attention.',
                     ];
                     echo htmlspecialchars($subtitles[$section] ?? $subtitles['dashboard']);
@@ -257,7 +260,7 @@ include __DIR__ . '/../layouts/header.php';
                         <option value="advisor" <?php echo $role_filter === 'advisor' ? 'selected' : ''; ?>>Advisors</option>
                         <option value="registrar" <?php echo $role_filter === 'registrar' ? 'selected' : ''; ?>>Registrars</option>
                     </select>
-                    <button type="submit" class="btn btn-primary">Filter</button>
+                    <button type="submit" class="btn btn-primary">Apply filters</button>
                 </form>
                 <div class="table-wrapper">
                     <table>

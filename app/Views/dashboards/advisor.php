@@ -15,12 +15,14 @@ include __DIR__ . '/../layouts/header.php';
 <div class="advisor-dashboard portal-dashboard" data-active-section="<?php echo htmlspecialchars($section); ?>">
     <?php
     $roleLabel = 'Academic Advisor';
-    $searchPlaceholder = 'Search students by name, email, or ID…';
+    $topbarSearch = portal_topbar_search('advisor', $section);
     $notifCount = (int) ($portalBadges['notifications'] ?? 0);
-    $searchAction = url('advisor_dashboard');
+    $searchAction = $topbarSearch['enabled'] ? url('advisor_dashboard') : '';
+    $searchSection = $topbarSearch['section'];
+    $searchPlaceholder = $topbarSearch['placeholder'];
+    $searchAriaLabel = $topbarSearch['aria'];
     $dashboardAction = 'advisor_dashboard';
     $searchValue = $search;
-    $searchSection = 'students';
     $notifLink = url('advisor_dashboard', ['section' => 'notifications']);
     include __DIR__ . '/../partials/portal-topbar.php';
     ?>
@@ -71,7 +73,7 @@ include __DIR__ . '/../layouts/header.php';
                     <div class="metric-info">
                         <span class="metric-value"><?php echo count($appointments ?? []); ?></span>
                         <span class="metric-label">Upcoming Appointments</span>
-                        <span class="metric-link">View Calendar →</span>
+                        <span class="metric-link">View appointments →</span>
                     </div>
                 </a>
                 <a href="<?php echo url('advisor_dashboard', ['section' => 'appointments']); ?>" class="metric-card purple">

@@ -2,7 +2,6 @@
     'use strict';
 
     var AAU_DOMAIN = '@aau.edu.et';
-    var DEMO_PASSWORD = 'password123';
 
     function $(id) {
         return document.getElementById(id);
@@ -86,18 +85,6 @@
         if (load) load.hidden = !loading;
     }
 
-    function fillDemoLogin(email) {
-        var emailInput = $('email');
-        var passwordInput = $('password');
-        if (emailInput) {
-            emailInput.value = email;
-            emailInput.focus();
-        }
-        if (passwordInput) {
-            passwordInput.value = DEMO_PASSWORD;
-        }
-    }
-
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelectorAll('.toggle-password').forEach(function (btn) {
             btn.addEventListener('click', function () {
@@ -110,18 +97,6 @@
                 if (open) open.hidden = !show;
                 if (closed) closed.hidden = show;
                 btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
-            });
-        });
-
-        document.querySelectorAll('.auth-v2-role-card[data-demo-email]').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                fillDemoLogin(btn.getAttribute('data-demo-email'));
-            });
-        });
-
-        document.querySelectorAll('.demo-account-btn').forEach(function (btn) {
-            btn.addEventListener('click', function () {
-                fillDemoLogin(btn.getAttribute('data-demo-email'));
             });
         });
 

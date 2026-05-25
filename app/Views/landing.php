@@ -1,3 +1,6 @@
+<?php
+$stats = $stats ?? ['students' => 0, 'advisors' => 0, 'messages' => 0, 'appointments' => 0];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -200,28 +203,28 @@
             <div class="stat-item">
                 <div class="stat-icon">👥</div>
                 <div class="stat-info">
-                    <strong>500+</strong>
+                    <strong><?php echo number_format((int) $stats['students']); ?></strong>
                     <span>Students</span>
                 </div>
             </div>
             <div class="stat-item">
                 <div class="stat-icon">👩‍🏫</div>
                 <div class="stat-info">
-                    <strong>50+</strong>
+                    <strong><?php echo number_format((int) $stats['advisors']); ?></strong>
                     <span>Advisors</span>
                 </div>
             </div>
             <div class="stat-item">
                 <div class="stat-icon">📄</div>
                 <div class="stat-info">
-                    <strong>1000+</strong>
+                    <strong><?php echo number_format((int) $stats['messages']); ?></strong>
                     <span>Messages</span>
                 </div>
             </div>
             <div class="stat-item">
                 <div class="stat-icon">📅</div>
                 <div class="stat-info">
-                    <strong>200+</strong>
+                    <strong><?php echo number_format((int) $stats['appointments']); ?></strong>
                     <span>Appointments</span>
                 </div>
             </div>

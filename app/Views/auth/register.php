@@ -99,8 +99,6 @@ include __DIR__ . '/../layouts/auth-header.php';
                     </button>
                 </form>
 
-                <div class="auth-v2-divider"><span>or</span></div>
-
                 <p class="auth-v2-card-footer">
                     Already have an account? <a href="<?php echo url('login'); ?>">Login here</a>
                 </p>

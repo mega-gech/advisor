@@ -69,6 +69,11 @@ class Appointment extends BaseModel {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function countAll(): int {
+        $stmt = $this->conn->query('SELECT COUNT(*) FROM ' . $this->table);
+        return (int) $stmt->fetchColumn();
+    }
+
     public function countPendingForAdvisor($advisor_id) {
         $query = 'SELECT COUNT(*) FROM ' . $this->table . '
                   WHERE advisor_id = :advisor_id AND status = "pending"';

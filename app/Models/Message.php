@@ -98,6 +98,11 @@ class Message extends BaseModel {
         return $this->sendMessage();
     }
 
+    public function countAll(): int {
+        $stmt = $this->conn->query('SELECT COUNT(*) FROM ' . $this->table);
+        return (int) $stmt->fetchColumn();
+    }
+
     public function countUnreadForUser($user_id, $role) {
         $query = "SELECT COUNT(*) FROM " . $this->table . "
                   WHERE is_read = 0 AND (receiver_id = :user_id";

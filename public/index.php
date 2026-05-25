@@ -23,7 +23,7 @@ $router->post('student_request_appointment', 'StudentController', 'requestAppoin
 
 $router->get('login', fn() => include VIEWS_PATH . '/auth/login.php');
 $router->get('register', fn() => include VIEWS_PATH . '/auth/register.php');
-$router->get('home', fn() => include VIEWS_PATH . '/landing.php');
+$router->get('home', fn() => (new HomeController())->index());
 
 $router->get('student_dashboard', fn() => (new StudentController())->dashboard(), 'student');
 $router->get('advisor_dashboard', fn() => (new AdvisorController())->dashboard(), 'advisor');

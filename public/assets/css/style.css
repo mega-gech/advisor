@@ -2940,22 +2940,6 @@ tbody tr:hover { background: rgba(79,70,229,.03); }
     font-weight: 500;
 }
 
-.search-form .search-submit-btn {
-    margin-left: 6px;
-    padding: 8px 14px;
-    border: none;
-    border-radius: var(--radius-sm);
-    background: var(--primary);
-    color: #fff;
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.search-form .search-submit-btn:hover {
-    background: var(--primary-dark);
-}
-
 .notification-bell {
     text-decoration: none;
     color: inherit;
