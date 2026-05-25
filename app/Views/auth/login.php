@@ -57,7 +57,7 @@ include __DIR__ . '/../layouts/auth-header.php';
                 </form>
 
                 <p class="auth-v2-card-footer">
-                    Don't have an account? <a href="<?php echo url('register'); ?>">Contact Registrar</a>
+                    Don't have an account? <a href="<?php echo url('register'); ?>">Register</a>
                 </p>
             </div>
         </div>

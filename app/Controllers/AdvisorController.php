@@ -27,6 +27,10 @@ class AdvisorController extends BaseController {
 
     public function getDashboardData(): array {
         $advisorId = (int) $_SESSION['user_id'];
+        $section = portal_section();
+        if (in_array($section, ['messages', 'notifications'], true)) {
+            $this->messageModel->markAllAsReadForUser($advisorId);
+        }
         $search = trim($_GET['search'] ?? '');
         $students = $this->assignment->getAssignedStudents($advisorId);
         $messages = $this->messageModel->getMessagesForUser($advisorId, 'advisor')->fetchAll(PDO::FETCH_ASSOC);

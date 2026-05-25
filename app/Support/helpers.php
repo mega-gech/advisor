@@ -77,7 +77,7 @@ function build_portal_notifications(array $messages, array $appointments, string
     $items = [];
 
     foreach ($messages as $message) {
-        if (!empty($message['is_read'])) {
+        if (!empty($message['is_read']) || ($message['message_type'] ?? '') === 'broadcast') {
             continue;
         }
         $items[] = [

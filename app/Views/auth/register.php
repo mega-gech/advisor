@@ -100,7 +100,7 @@ include __DIR__ . '/../layouts/auth-header.php';
                 </form>
 
                 <p class="auth-v2-card-footer">
-                    Already have an account? <a href="<?php echo url('login'); ?>">Login here</a>
+                    Already have an account? <a href="<?php echo url('login'); ?>">Login</a>
                 </p>
             </div>
         </div>

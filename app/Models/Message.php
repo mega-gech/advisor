@@ -88,6 +88,17 @@ class Message extends BaseModel {
         return $stmt->execute();
     }
 
+    public function markAllAsReadForUser(int $user_id): bool {
+        $query = 'UPDATE ' . $this->table . '
+                 SET is_read = TRUE
+                 WHERE receiver_id = :user_id
+                   AND message_type = "individual"
+                   AND is_read = 0';
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+        return $stmt->execute();
+    }
+
     public function sendDirectMessage($sender_id, $receiver_id, $title, $body) {
         $this->sender_id = $sender_id;
         $this->receiver_id = $receiver_id;
@@ -104,12 +115,8 @@ class Message extends BaseModel {
     }
 
     public function countUnreadForUser($user_id, $role) {
-        $query = "SELECT COUNT(*) FROM " . $this->table . "
-                  WHERE is_read = 0 AND (receiver_id = :user_id";
-        if ($role === 'advisor') {
-            $query .= " OR (message_type = 'broadcast' AND audience_type = 'advisor')";
-        }
-        $query .= ")";
+        $query = 'SELECT COUNT(*) FROM ' . $this->table . '
+                  WHERE is_read = 0 AND receiver_id = :user_id';
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(':user_id', $user_id);
         $stmt->execute();

@@ -26,6 +26,10 @@ class StudentController extends BaseController {
 
     public function getDashboardData(): array {
         $studentId = (int) $_SESSION['user_id'];
+        $section = portal_section();
+        if (in_array($section, ['messages', 'notifications'], true)) {
+            $this->messageModel->markAllAsReadForUser($studentId);
+        }
         $search = trim($_GET['search'] ?? '');
         $messages = $this->messageModel->getMessagesForUser($studentId, 'student')->fetchAll(PDO::FETCH_ASSOC);
         $allAppointments = $this->appointmentModel->getAllForStudent($studentId);

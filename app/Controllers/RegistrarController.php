@@ -160,6 +160,21 @@ class RegistrarController extends BaseController {
         $pending = $this->userModel->getPendingStudents();
         $assignments = $this->assignment->getAllAssignments()->fetchAll(PDO::FETCH_ASSOC);
 
+        // If the registrar is viewing notifications, mark these dynamic items as seen in session
+        $section = portal_section();
+        if ($section === 'notifications') {
+            $seen = $_SESSION['seen_notifications'] ?? [];
+            foreach ($pending as $p) {
+                $seenKey = 'approval_' . ($p['id'] ?? '');
+                $seen[$seenKey] = true;
+            }
+            foreach ($assignments as $a) {
+                $seenKey = 'assignment_' . ($a['id'] ?? '');
+                $seen[$seenKey] = true;
+            }
+            $_SESSION['seen_notifications'] = $seen;
+        }
+
         $totalStudents = $this->userModel->countByRole('student');
         $totalAdvisors = $this->userModel->countByRole('advisor');
         $totalRegistrars = $this->userModel->countByRole('registrar');
@@ -196,8 +211,13 @@ class RegistrarController extends BaseController {
 
     private function buildNotifications(array $pending, array $assignments): array {
         $items = [];
+        $seen = $_SESSION['seen_notifications'] ?? [];
 
         foreach ($pending as $student) {
+            $key = 'approval_' . ($student['id'] ?? '');
+            if (!empty($seen[$key])) {
+                continue;
+            }
             $items[] = [
                 'type' => 'approval',
                 'title' => 'Pending student approval',
@@ -208,6 +228,10 @@ class RegistrarController extends BaseController {
         }
 
         foreach (array_slice($assignments, 0, 8) as $assignment) {
+            $key = 'assignment_' . ($assignment['id'] ?? '');
+            if (!empty($seen[$key])) {
+                continue;
+            }
             $items[] = [
                 'type' => 'assignment',
                 'title' => 'Advisor assignment',

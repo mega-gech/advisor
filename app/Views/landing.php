@@ -135,7 +135,6 @@ $stats = $stats ?? ['students' => 0, 'advisors' => 0, 'messages' => 0, 'appointm
     <section id="how-it-works" class="how-it-works section">
         <div class="container">
             <div class="section-header text-center">
-                <span class="eyebrow">HOW IT WORKS</span>
                 <h2>Simple steps to get started</h2>
             </div>
             <div class="steps-container">
@@ -265,14 +264,14 @@ $stats = $stats ?? ['students' => 0, 'advisors' => 0, 'messages' => 0, 'appointm
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Us</h4>
-                    <p>✉️ support@advisorhub.edu</p>
-                    <p>📞 +234 800 123 4567</p>
-                    <p>📍 AAU, University Campus<br>Ekpoma, Edo State, Nigeria.</p>
+                    <p>✉️support@advisorhub.edu</p>
+                    <p>📞 +251932723772</p>
+                    <p>📍 AAU, University Campus<br>Addis Ababa,Ethiopia</p>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 AdvisorHub. All rights reserved.</p>
-                <p>Made with ❤️ for academic excellence.</p>
+                <p>Made with IS team</p>
             </div>
         </div>
     </footer>
